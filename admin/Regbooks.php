@@ -67,6 +67,7 @@
 							<td><?php echo $row['author_name'];?></td>
 							<td><?php echo $row['book_price'];?></td>
 							<td><?php echo $row['book_no'];?></td>
+							<!-- <td>//<?php echo $row['Quantity'];?></td> -->
 						</tr>
 
 					<?php

@@ -133,6 +133,19 @@
 				</div>
 			</div>
 		</div>
+		<<div>
+		
+		</div>
+		<div class="col-md-3" style="margin-right: 1000px">
+			<div class="card bg-light" style="width: 300px">
+				<div class="card-header">Details</div>
+				<div class="card-body">
+					<p class="card-text"> for each student </p>
+					<a class="btn btn-success" href="getdetails.html" target="_blank">Get</a>
+				</div>
+			</div>
+		</div>
+		</div>
 	</div>
 	
 </body>

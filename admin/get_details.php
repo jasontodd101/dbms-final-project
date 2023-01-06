@@ -8,7 +8,8 @@
 	$category = "";
 	$book_no = "";
 	$price = "";
-	$sql = mysqli_query($connection,"SELECT * from activity ");
+    $eid= $_POST['eid'];
+	$sql = mysqli_query($connection,"SELECT * from issued_books where issued_books.student_id=$eid  ;");
 ?>
 
 
@@ -40,23 +41,28 @@ th {
 
 echo '<table border="0" cellspacing="2" cellpadding="2"> 
       <tr> 
-      <th> <font face="Arial">bookname </font> </th> 
-          <th> <font face="Arial">student id</font> </th> 
-          <th> <font face="Arial">date and time</font> </th> 
+      <th> <font face="Arial"> </font>Book Number</th> 
+          <th> <font face="Arial">Book Name</font> </th>
+          <th> <font face="Arial">Bookauthor</font> </th>
+
+          <th> <font face="Arial">Date and Time</font> </th> 
            
       </tr>';
 
 
     while ($row = mysqli_fetch_array($sql)) {
-        $lname= $row['student id'];
-        $fname = $row['book name'];
-        $gender = $row['date'];
+        
+$fname = $row['book_no'];
+        $lname= $row['book_name'];
+        $gender = $row['book_author'];
+        $date=$row['issue_date'];
         
 
         echo '<tr> 
                  <td>'.$fname.'</td> 
                  <td>'.$lname.'</td> 
                  <td>'.$gender.'</td> 
+                 <td>'.$date.'</td> 
                    
               </tr>';
     }
